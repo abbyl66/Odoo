@@ -1,0 +1,200 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="odoo51y.modelo51y_list_view">
+      <field name="name">odoo51y.modelo51y.view.tree</field>
+      <field name="model">odoo51y.modelo51y</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="titulo"/>
+          <field name="autor"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.modelo51y_search_view">
+      <field name="name">odoo51y.modelo51y.view.search</field>
+      <field name="model">odoo51y.modelo51y</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="titulo"/>
+          <field name="autor"/>
+          <group>
+            <filter name="group_by_titulo" string="titulo" context="{'gropup_by':'titulo'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.modelo51y_form_view">
+      <field name="name">odoo51y.modelo51y.view.form</field>
+      <field name="model">odoo51y.modelo51y</field>
+      <field name="arch" type="xml">
+        <form string="Información libro">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="ID"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Datos"/>
+                <field name="titulo" placeholder="Titulo del libro"/>
+                <field name="autor" placeholder="Nombre del autor"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo51y.modelo51y_action_window">
+      <field name="name">Libros</field>
+      <field name="res_model">odoo51y.modelo51y</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="odoo51y" id="odoo51y.menu_root" web_icon= "odoo51y,static/description/icon.png"/>
+    <menuitem name="Libros" id="odoo51y.menu_libro" parent="odoo51y.menu_root"/>
+    <menuitem name="Libros guardados" id="odoo51y.menu_libro_list" parent="odoo51y.menu_libro"
+              action="odoo51y.modelo51y_action_window"/>
+
+    #Segundo modelo: Autores
+    <record model="ir.ui.view" id="odoo51y.autores51y_list_view">
+      <field name="name">odoo51y.autores51y.view.tree</field>
+      <field name="model">odoo51y.autores51y</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="pais_Nacimiento"/>
+          <field name="libro_Destacado"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.autores51y_search_view">
+      <field name="name">odoo51y.autores51y.view.search</field>
+      <field name="model">odoo51y.autores51y</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="pais_Nacimiento"/>
+          <field name="libro_Destacado"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.autores51y_form_view">
+      <field name="name">odoo51y.autores51y.view.form</field>
+      <field name="model">odoo51y.autores51y</field>
+      <field name="arch" type="xml">
+        <form string="Información del autor">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="ID"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Información personal"/>
+                <field name="nombre" placeholder="Nombre del autor"/>
+                <field name="pais_Nacimiento" placeholder="Pais nacimiento"/>
+                <field name="libro_Destacado" placeholder="Libro destacado"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo51y.autores51y_action_window">
+      <field name="name">Autores</field>
+      <field name="res_model">odoo51y.autores51y</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo51y" id="odoo51y.menu_root" web_icon= "odoo51y,static/description/icon.png"/>
+    <menuitem name="Autores" id="odoo51y.menu_autores" parent="odoo51y.menu_root"/>
+    <menuitem name="Autores guardados" id="odoo51y.menu_autores_list" parent="odoo51y.menu_autores"
+              action="odoo51y.autores51y_action_window"/>
+
+    #Tercer modelo: Editoriales
+    <record model="ir.ui.view" id="odoo51y.editoriales51y_list_view">
+      <field name="name">odoo51y.editoriales51y.view.tree</field>
+      <field name="model">odoo51y.editoriales51y</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="fundador"/>
+          <field name="pais"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.editoriales51y_search_view">
+      <field name="name">odoo51y.editoriales51y.view.search</field>
+      <field name="model">odoo51y.editoriales51y</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="nombre"/>
+          <field name="fundador"/>
+          <field name="pais"/>
+          <group>
+            <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo51y.editoriales51y_form_view">
+      <field name="name">odoo51y.editoriales51y.view.form</field>
+      <field name="model">odoo51y.editoriales51y</field>
+      <field name="arch" type="xml">
+        <form string="Información de la editorial">
+          <sheet>
+            <div class="oe_title">
+              <h1>
+                ID <field name="name" placeholder="ID"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <separator string="Información editorial"/>
+                <field name="nombre" placeholder="Nombre de la editorialr"/>
+                <field name="fundador" placeholder="FUndador de la editorial"/>
+                <field name="pais" placeholder="Pais"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo51y.editoriales51y_action_window">
+      <field name="name">Editoriales</field>
+      <field name="res_model">odoo51y.editoriales51y</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="odoo51y" id="odoo51y.menu_root" web_icon= "odoo51y,static/description/icon.png"/>
+    <menuitem name="Editoriales" id="odoo51y.menu_editoriales" parent="odoo51y.menu_root"/>
+    <menuitem name="Editoriales guardadas" id="odoo51y.menu_editoriales_list" parent="odoo51y.menu_editoriales"
+              action="odoo51y.editoriales51y_action_window"/>
+
+  </data>
+</odoo>

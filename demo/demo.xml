@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+          <record id="object0" model="odoo51y.modelo51y">
+            <field name="name">1</field>
+            <field name="titulo">EL día que dejó de nevar en Alaska</field>
+            <field name="autor">Alice Kellen</field>
+          </record>
+
+          <record id="object1" model="odoo51y.modelo51y">
+            <field name="name">2</field>
+            <field name="titulo">EL príncipe cruel</field>
+            <field name="autor">Holly Black</field>
+          </record>
+
+          <record id="object2" model="odoo51y.modelo51y">
+            <field name="name">3</field>
+            <field name="titulo">La historiadora</field>
+            <field name="autor">ELizabeth Kostova</field>
+          </record>
+
+          <record id="object3" model="odoo51y.modelo51y">
+            <field name="name">4</field>
+            <field name="titulo">American Royals</field>
+            <field name="autor">Katharine McGee</field>
+          </record>
+
+        <record id="object0" model="odoo51y.autores51y">
+            <field name="name">1</field>
+            <field name="nombre">Alice Kellen</field>
+            <field name="pais_Nacimiento">Estados Unidos</field>
+            <field name="libro_Destacado">El día que dejó de nevar en ALaska</field>
+        </record>
+
+        <record id="object0" model="odoo51y.editoriales51y">
+            <field name="name">1</field>
+            <field name="nombre">Titania</field>
+            <field name="fundador">Joseph Jackson</field>
+            <field name="pais">Estados Unidos</field>
+        </record>
+
+    </data>
+</odoo>

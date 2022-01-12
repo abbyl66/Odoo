@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo51y_modelo51y_usuario,odoo51y.modelo51y.usuario,model_odoo51y_modelo51y,odoo51y.group_odoo51y_usuario,1,0,0,0
+access_odoo51y_modelo51y_administrador,odoo51y.modelo51y.administrador,model_odoo51y_modelo51y,odoo51y.group_odoo51y_administrador,1,1,1,1_
+
+access_odoo51y_autores51y_usuario,odoo51y.autores51y.usuario,model_odoo51y_autores51y,odoo51y.group_odoo51y_usuario,1,0,0,0
+access_odoo51y_autores51y_administrador,odoo51y.autores51y.administrador,model_odoo51y_autores51y,odoo51y.group_odoo51y_administrador,1,1,1,1_
+
+access_odoo51y_editoriales51y_usuario,odoo51y.editoriales51y.usuario,model_odoo51y_editoriales51y,odoo51y.group_odoo51y_usuario,1,0,0,0
+access_odoo51y_editoriales51y_administrador,odoo51y.editoriales51y.administrador,model_odoo51y_editoriales51y,odoo51y.group_odoo51y_administrador,1,1,1,1_
